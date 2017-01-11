@@ -20,6 +20,14 @@ app.get('/', function(request, response) {
   }
   mountLemmonWebcamPull.stdout.on('data', log);
   mountLemmonWebcamPull.stderr.on('data', log);
+
+  var fs = require('fs')
+    , filename = '/home/thehappyginger/Public/summit/listjpg.txt';
+  fs.readFile(filename, 'utf8', function(err, data) {
+    if (err) throw err;
+    console.log('OK: ' + filename);
+    console.log(data)
+  });
 });
 
 // Listen for incoming HTTP requests on port 3003
