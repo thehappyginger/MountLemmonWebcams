@@ -23,7 +23,7 @@ app.get('/', function(request, response) {
 });
 
 // Listen for incoming HTTP requests on port 3003
-app.listen(3003);
+app.listen(3004);
 
 // Make sure the Minecraft server dies with this process
 process.on('exit', function() {
